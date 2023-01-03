@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        ArrayList<Integer> arr=new ArrayList<>();
+        HashMap<Integer,Integer> map=new HashMap<>();
+        for(int i=0; i<n; i++){
+            arr.add(sc.nextInt());
+            map.put(arr.get(i),map.getOrDefault(arr.get(i),0)+1);
+        }
+        arr.sort((a,b)->{
+            if(map.get(a)==map.get(b))
+                return b-a;
+            return map.get(a)-map.get(b);
+        }); 
+        
+        for(int a:arr)
+            System.out.print(a+" ");
+    }
+}
