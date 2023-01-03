@@ -1,1 +1,1 @@
-# JAVA-LeetCode-Codes
+# JAVA-Codes
