@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static String samePrefix(String a[]){
+        if(a.length==0){
+            return "";
+        }
+        String prefix=a[0];
+        int index=prefix.length();
+        for(int i=1;i<a.length;i++){
+            for(int j=0; j<index; j++){
+                if(j>=a[i].length() || prefix.charAt(j)!=a[i].charAt(j)){
+                    index=j;
+                    break;
+                }
+            }
+        }
+        return prefix.substring(0, index);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        String a[]=new String[n];
+        for(int i=0;i<n;i++){
+            a[i]=sc.next();
+        }
+        System.out.println(samePrefix(a));
+    }
+}
