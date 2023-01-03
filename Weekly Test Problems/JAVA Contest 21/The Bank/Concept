@@ -1,0 +1,37 @@
+Description: You are supposed to implement the requirements provided below by creating a cli application in a programming language you choose.
+You will be building a banking application. The user will be able to perform the following actions along with the needed Input.
+
+you will be given a Stream of string input.
+
+case 1. "CREATE AC001 KELP" --> this means we have to create an account of account number AC001 and name KELP.
+case 2. "DEPOSIT AC001 10000" --> this means we have to deposit 10000 in AC001 bank account.
+case 3. "WITHDRAW AC001 1000" --> this means we have to withdraw 1000 from AC001 bank account.
+case 4. "BALANCE AC001" --> this means we have to print the name of the account holder and balance the his account.
+case 5. "0" -> END (End the program).
+
+Suggestion -
+1. Create a class called Account which contains attributes Amount, Name , ID.
+Use hashmap to store multiple accounts
+
+Input Format :-
+stream of string input will be given.
+
+Constraints :-
+1 <= string length <=1000
+
+Output Format :-
+print the output as shown in sample output.
+
+Sample Input :-
+CREATE ACC001 KELP 
+DEPOSIT ACC001 10000 
+WITHDRAW ACC001 1000 
+CREATE ACC002 FVTPL 
+DEPOSIT ACC002 10000 
+WITHDRAW ACC002 2000 
+BALANCE ACC002 
+BALANCE ACC001 
+0
+Sample Output :-
+FVTPL 8000
+KELP 9000
